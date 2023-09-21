@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*,
+*::after,
+*::before{
+    padding: 20px;
+    margin: 20px;
+    border: 0;
+    box-sizing: border-box;
+    transition: 0.2s ease-in-out;
+}
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+  
+}
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    position: fixed;
+    z-index: -99;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: linear-gradient(to top, #3bd6eb 20%, #3737cc 80%);
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+.full-screen__title{
+    font-size: 5rem;
+    line-height: 6rem;
+    color: #ccc;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 8px;
+}
+
+body{
+    background-color: #b1bbaf;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    justify-content: center;
+    align-items: center;
+}
+    
+.wrapper{
+    text-align: center;
+}
+
+.menu{
+    position:absolute ;
+    background: url(20220820_151958.jpg);
+    max-width: 60%;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgba(253, 240, 51, 0.973);
+    position: relative;
+    z-index: 99;
+
+    /* border-radius: 30%;
+    border-color:rgba(253, 240, 51, 0.973); */
+    
+    
+}
+
+.menu_1 {
+    text-align: center;
+    margin: 5px;
+    list-style-type: none;
+}
+
+
+
+.wrap_button {
+    background-color: rgba(142, 99, 223, 0.281); 
+    position: relative;
+    height: 25vh;
+    width: 100%;
+   
+    
+    
+
+}
+.wrap_button a {
+    position: absolute;
+    font-size: 28px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    background-color: #152686;
+    /* padding: 15px 35px; */
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #7b8ceb;
+    width: 370px;
+    height: 50px;
+    line-height: 70px;
+    border-radius: 15px;
+} 
+
+.wrap_button a:hover{
+    background-color: white;
+    color: #152686;
+}
+
+
+
+.link_text{
+    position: absolute;
+    text-align:center;
+    transform: translate(-1%, -65%);
+
+   
+}
